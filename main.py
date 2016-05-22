@@ -10,14 +10,15 @@ class Tile(object):
 
     @property
     def tile_width(self):
-        return type(self)._tile_width
+        return Tile._tile_width
 
     @property
     def tile_height(self):
-        return type(self)._tile_height
+        return Tile._tile_height
 
 
 if __name__ == '__main__':
     # Debugging, don't fucking worry about it!
     t = Tile(1, (0., 0.))
     t2 = Tile(2, (1., 0.))
+    print(t.tile_width)

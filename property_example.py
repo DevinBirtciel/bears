@@ -1,20 +1,20 @@
 class Example(object):
     """ Demo of getters and setters in Python with the @property decorator """
     def __init__(self):
-        self._x = None
+        self._x = None  # A leading underscore denotes a "private" variable in Python
 
     @property
     def x(self):
         """I'm the 'x' property."""
-        print "getter of x called"
+        print("getter of x called")
         return self._x
 
     @x.setter
     def x(self, value):
-        print "setter of x called"
+        print("setter of x called")
         self._x = value
 
     @x.deleter
     def x(self):
-        print "deleter of x called"
+        print("deleter of x called")
         del self._x
